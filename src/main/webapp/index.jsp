@@ -11,7 +11,7 @@
 <%@ include file="component/allCss.jsp"%>
 <style type="text/css">
 .back-img {
-	background: url("img/cell.jpg") no-repeat center center;
+	background: url("img/book-glasses-phone-smartphone.jpg") no-repeat center center;
 	background-size: cover;
 	height: 85vh;
 	width: 100%;
