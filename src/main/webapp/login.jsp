@@ -8,98 +8,115 @@
 <%@ include file="component/allCss.jsp"%>
 <style type="text/css">
 body {
-    background: url("img/book-glasses-phone-smartphone.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+	background: url("img/book-glasses-phone-smartphone.jpg") no-repeat
+		center center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(3px);
-    z-index: -1;
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(3px);
+	z-index: -1;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    color: white;
+	position: relative;
+	z-index: 1;
+	color: white;
 }
 
 .crd-ho {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
 }
 
 .crd-ho:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-5px);
 }
 
 .contact-card {
-    height: 100%;
+	height: 100%;
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .card-actions {
-    margin-top: auto;
+	margin-top: auto;
 }
 
 .no-contacts {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 50px;
 }
+
 .card {
-    background-color: rgba(0, 0, 0, 0.4); /* black with transparency */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    color: white;
+	background-color: rgba(0, 0, 0, 0.4); /* black with transparency */
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	color: white;
 }
 
 .form-control {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: white;
 }
+
 .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.6);
 }
+
 .btn-outline-register {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
 }
 
 .btn-outline-register:hover {
-    background-color: Skyblue;
-    color: black;
+	background-color: Skyblue;
+	color: black;
+}
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
+.footer-text span {
+    color: #FFA500;
+    font-weight: 500;
+}
 
+.footer-text:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 </style>
 
 </head>
-<body >
+<body>
 	<%@include file="component/navabar.jsp"%>
 	<div class="container-fluid">
 		<div class="row p-5">
@@ -118,8 +135,8 @@ body::before {
 
 						}
 						%>
-						
-						
+
+
 						<%
 						String logMsg = (String) session.getAttribute("logMsg");
 						if (logMsg != null) {
@@ -147,9 +164,12 @@ body::before {
 							</div>
 						</form>
 
-						<div class="mt-4 text-center text-muted">
-							<small>Developed & Designed by Kavya Sri</small>
+						<div class="mt-4 text-center">
+							<small class="footer-text"> 2025 | Developed & Designed
+								by <span>Kavya Sri</span>
+							</small>
 						</div>
+
 					</div>
 				</div>
 			</div>

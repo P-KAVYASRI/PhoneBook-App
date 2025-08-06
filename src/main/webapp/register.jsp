@@ -94,6 +94,25 @@ body::before {
     color: black;
 }
 
+.card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-text span {
+    color: #FFA500;
+    font-weight: 500;
+}
+
+.footer-text:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 
 </style>
@@ -152,8 +171,10 @@ body::before {
 						</form>
 
 						<!-- Footer inside the card -->
-						<div class="mt-4 text-center text-muted">
-							<small>Developed & Designed by Kavya Sri</small>
+						<div class="mt-4 text-center">
+							<small class="footer-text"> 2025 | Developed & Designed
+								by <span>Kavya Sri</span>
+							</small>
 						</div>
 					</div>
 				</div>

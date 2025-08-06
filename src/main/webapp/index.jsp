@@ -9,38 +9,77 @@
 <meta charset="UTF-8">
 <title>Phone Book App</title>
 <%@ include file="component/allCss.jsp"%>
-<style type="text/css">
+
+<style>
+/* Full-page background with overlay */
 .back-img {
 	background: url("img/book-glasses-phone-smartphone.jpg") no-repeat center center;
 	background-size: cover;
-	height: 85vh;
-	width: 100%;
+	background-attachment: fixed;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	height: 85vh;
+	position: relative;
+}
+
+/* Glassmorphism overlay */
+.back-img::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(4px);
+	z-index: 1;
+}
+
+/* Welcome text box */
+.welcome-box {
+	position: relative;
+	z-index: 2;
+	padding: 40px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 15px;
+	text-align: center;
 	color: white;
-	text-shadow: 2px 2px 4px #000000;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-.container-fluid {
-	padding: 0;
+/* Heading styling */
+.welcome-box h1 {
+	color: #ffffff;
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0;
+	text-shadow: 2px 2px 6px #000000;
+	animation: fadeIn 1.2s ease-in-out;
 }
 
-h1 {
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 20px;
-	border-radius: 10px;
+/* Fade animation */
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(-20px); }
+	to { opacity: 1; transform: translateY(0); }
 }
+
+
+
 </style>
+
 </head>
 <body>
+
 	<%@ include file="component/navabar.jsp"%>
 
-	
-	<div class="container-fluid back-img text-center">
-		<h1>Welcome to PhoneBook App</h1>
+	<div class="container-fluid back-img">
+		<div class="welcome-box">
+			<h1>Welcome to PhoneBook App</h1>
+		</div>
 	</div>
-	</div>
+
 	<%@include file="component/footer.jsp"%>
 </body>
 </html>
